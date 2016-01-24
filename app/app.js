@@ -11,7 +11,10 @@ angular.module('weatherApp', [
   
     $routeProvider
         .when('/', {
-            templateUrl : 'Views/partials/home.html',
+            templateUrl: 'Views/partials/home.html'
+        })
+        .when('/weather', {
+            templateUrl : 'Views/partials/weather.html',
             controller  : 'weatherCtrl',
             resolve     : {
                 weather: function(WeatherFactory){
