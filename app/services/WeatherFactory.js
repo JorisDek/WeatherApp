@@ -1,4 +1,4 @@
-angular.module('weatherApp')
+weatherApp
         .factory('WeatherFactory'['$http', '$scope', function($http, $scope){
             var apidata = {
                 getWeather: function(){

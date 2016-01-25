@@ -1,26 +1,29 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('weatherApp', [
-  'ngRoute',
-//  'ui.router',
+var weatherApp = angular.module('weatherApp', [
+//  'ngRoute',
+  'ui.router'
 //  'myApp.version'
-])
-.config(['$routeProvider', function($routeProvider) {
-    
-  
-    $routeProvider
-        .when('/', {
+]);
+
+weatherApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+    $stateProvider
+        .state('home', {
+            url: '/',
             templateUrl: 'Views/partials/home.html'
         })
-        .when('/weather', {
-            templateUrl : 'Views/partials/weather.html',
-            controller  : 'weatherCtrl',
-            resolve     : {
+        .state('weather', {
+            url: '/weather',
+            templateUrl : 'Views/partials/weather.html'
+            /*controller  : 'WeatherCtrl'
+            /*resolve     : {
                 weather: function(WeatherFactory){
                     return WeatherFactory.getWeather();
                 }
-            }
+            }*/
         });
-    $routeProvider.otherwise({redirectTo: '/'});
-}]);
+    $urlRouterProvider.otherwise('/');
+    
+    $locationProvider.html5Mode(true).hashPrefix("!");
+});
