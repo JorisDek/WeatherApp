@@ -1,4 +1,9 @@
-angular.module('weatherApp')
-    .controller('WeatherCtrl', ['WeatherFactory', function(WeatherFactory){
-        $scope.cityname = WeatherFactory.name;
+var weatherApp = angular.module('weatherApp', [
+//  'ngRoute',
+  'ui.router'
+//  'myApp.version'
+]);
+weatherApp.module('weatherApp')
+    .controller('WeatherCtrl', ['$scope', 'WeatherFactory', function($scope, WeatherFactory){
+        $scope.cityname = 'Voorburg';
     }]);
