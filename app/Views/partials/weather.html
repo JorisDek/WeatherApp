@@ -3,9 +3,18 @@
             <div class="col-md-4">
                 
             </div>
-            <div class="col-md-4">
-                <h2>{{ data.name }}</h2>
-                <p>{{ data.main.temp }}&deg;C</p>
+            <div class="col-md-4 weatherforecast">
+                <h2>{{ data.city.name }}</h2>
+                
+                
+                <ul ng-model="data.list" class="forecast">
+                    <li ng-repeat="list in data.list">
+                        <p><b>{{ list.dt_txt }}</b></p>
+                        <p>{{ list.main.temp }} &deg;C</p>
+                        <p ng-repeat="weather in list.weather">{{ weather.description }}</p>
+                        <p>Wind: {{ list.wind.speed * 3.6 }}km/u</p>
+                    </li>
+                </ul>
             </div>
             <div class="col-md-4">
                 
