@@ -13,6 +13,8 @@
                         <p>{{ list.main.temp }} &deg;C</p>
                         <p ng-repeat="weather in list.weather">{{ weather.description }}</p>
                         <p>Wind: {{ list.wind.speed * 3.6 }}km/u</p>
+                        
+                        <p>{{ cityid }}</p>
                     </li>
                 </ul>
             </div>

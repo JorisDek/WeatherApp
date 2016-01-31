@@ -13,6 +13,11 @@ weatherApp.config(function($stateProvider, $urlRouterProvider, $locationProvider
             url: '/',
             templateUrl: 'Views/partials/home.html'
         })
+        .state('cities', { 
+            url: '/cities',
+            templateUrl: 'Views/partials/cities.html',
+            controller: 'CityListCtrl'
+        })
         .state('weather', { 
             url: '/weather',
             templateUrl: 'Views/partials/weather.html',
