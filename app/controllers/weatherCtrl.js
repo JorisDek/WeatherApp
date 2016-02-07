@@ -11,7 +11,13 @@ angular.module('weatherApp')
 //            $scope.response = response.data;
 //        });
         
-        WeatherFactory.then(function(result){
-            $scope.data = WeatherFactory.getForecast();
+        WeatherFactory.list(function(data){
+            $scope.data = data;
+            var datalist = data.list;
+            console.log(datalist);
+            for(var list in datalist){
+                console.log(list);  
+                
+            }
         });
     }]);

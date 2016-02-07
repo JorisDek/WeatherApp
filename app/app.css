@@ -29,13 +29,29 @@
   padding: 0;
 }
 
-.weatherforecast ul.forecast {
+/*.weatherforecast .forecast {
     padding: 0;
 }
-.weatherforecast ul.forecast li{
+.weatherforecast .forecast div{
     list-style-type: none;
     border: 1px solid #E0E0E0;
     border-radius: 5px;
     margin: 15px 0 0 0;
     padding: 15px;
+}*/
+.temp {
+    font-size: 4.5em;
+}
+.wind-speed {
+    font-size: 2em;
+    font-weight: 700;
+}
+.wi-celsius {
+    font-size: 3em;
+}
+.wi-humidity {
+    font-size: 2em;
+}
+.wi-wind {
+    font-size: 8em;
 }
