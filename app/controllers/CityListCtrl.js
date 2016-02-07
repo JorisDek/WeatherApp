@@ -3,7 +3,7 @@ angular.module('weatherApp')
         
         CityFactory.list(function(cities) {
             //console.log(cities);
-            //$scope.cities = cities;
+            $scope.cities = cities;
           
             
             if ($scope.searchText == 'Voorburg'){
